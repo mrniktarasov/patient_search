@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "init-dev": "concurrently \"cd ../backend && pip install -r requirements.txt\" \"npm install\" ",
+    "init-dev": "npm install && cd ../backend && pip install -r requirements.txt",
     "start-dev": "concurrently \"cd ../backend/app && uvicorn main:app --host 0.0.0.0 --port 8000 --reload\" \"npm start\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
