@@ -9,6 +9,10 @@ cd patient_search/frontend
 npm run-script init-dev
 npm run-script start-dev
 ```
+Или через docker-compose:
+```
+docker-compose up
+```
 И перейти на  http://localhost:3000/
 ## Демонстрация
 ![Макет](https://github.com/mrniktarasov/patient_search/blob/master/screens/screenshot_1.png)
