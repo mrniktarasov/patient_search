@@ -1,0 +1,17 @@
+version: '3'
+services:
+  back:
+    build: ./backend
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    container_name: "patient_search_backend"
+    ports:
+      - "8000:8000"
+
+  front:
+    build: ./frontend
+    command: npm start
+    container_name: "patient_search_frontend"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back
